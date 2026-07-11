@@ -60,3 +60,41 @@ nav#menu a:hover {
   background-color: var(--destaque-inverso);
   color: var(--destaque);
 }
+
+main {
+  
+}
+
+section#ficha{
+  background-color: var(--fundo-card);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+section#ficha img.foto{
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 5px solid var(--fundo-card);
+  outline: 5px solid var(--destaque);
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+section#ficha h1{
+  color: var(--destaque);
+  text-align: center;
+  font-size: 1.5em;
+  margin: 15px 0;
+}
+
+div#social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  font-size: 1.5em;
+}
