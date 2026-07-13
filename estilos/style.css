@@ -14,7 +14,7 @@
   box-sizing: border-box;
 }
 
-:ROOT{
+:root{
   --fundo-principal: #f5f5f5;
   --texto: #222222;
   --texto-inverso: #ffffff;
@@ -73,7 +73,6 @@ section#ficha{
   border-radius: 10px;
   grid-column: 2;
   gap: 20px;
-
 }
 
 section#ficha img.foto{
@@ -98,7 +97,6 @@ section#ficha h1{
 
 section#detalhes {
   grid-column: 2;
-
 }
  
 article{
@@ -111,7 +109,7 @@ article{
 article h2{
   color: var(--destaque);
   font-size: 1.3em;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .video-container{
@@ -128,10 +126,10 @@ article h2{
   width: 100%;
   height: 100%;
   border-radius: 10px;
-
 }
 
-div#social{
+/* CORRIGIDO: era div#social, no HTML é class="social" */
+div.social{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,12 +138,12 @@ div#social{
   margin-top: 15px;
 }
 
-div#social a{
+div.social a{
   color: var(--destaque);
   transition: color 0.3s ease;
 }
 
-div#social a:hover{
+div.social a:hover{
   color: var(--destaque-inverso);
 }
 
@@ -185,9 +183,48 @@ div#social a:hover{
   border-radius: 4px;
 }
 
+#formacao-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+#formacao-container .curso {
+  background-color: var(--fundo-principal);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-left-width 0.3s ease, border-color 0.3s ease;
+}
+
+#formacao-container .curso:hover{
+  border-left-width: 15px;
+  border-color: var(--destaque);
+  cursor: pointer;
+}
+
+/* CORRIGIDO: era #fomacao-container (typo) */
+#formacao-container .periodo {
+  font-size: 0.9em;
+  color: var(--texto);
+  font-weight: bold;
+}
+
+/* Adicionado: classes que não tinham estilo nenhum */
+#formacao-container .instituição {
+  font-size: 1.1em;
+  color: var(--destaque);
+  margin: 5px 0;
+}
+
+#formacao-container .titulacao {
+  font-size: 0.95em;
+  color: var(--texto);
+  margin-top: 5px;
+}
+
 @media screen and (min-width: 768px) {
   #skills-container {
     grid-template-columns: 1fr 1fr;
   }
-  
 }
