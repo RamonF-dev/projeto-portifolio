@@ -148,3 +148,39 @@ div#social a{
 div#social a:hover{
   color: var(--destaque-inverso);
 }
+
+#skills-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+#skills-container .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#skills-container .nome {
+ font-weight: bold;
+ color: var(--texto);
+}
+
+#skills-container .porcent {
+  font-weight: bold;
+  color: var(--destaque);
+}
+
+#skills-container .barra {
+  width: 100%;
+  height: 20px;
+  background-color: var(--fundo-principal);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#skills-container .progresso {
+  height: 100%;
+  background-color: var(--destaque-inverso);
+  border-radius: 4px;
+}
