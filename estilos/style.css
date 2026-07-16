@@ -223,8 +223,44 @@ div.social a:hover{
   margin-top: 5px;
 }
 
+#projeto-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+#projeto-container .projeto {
+  background-color: var(--fundo-principal);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-left-width 0.3s ease, border-color 0.3s ease;
+
+}
+
+#projeto-container .projeto:hover{
+  border-left-width: 15px;
+  border-color: var(--destaque);
+  cursor: pointer;
+}
+
+#projeto-container .foto{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
 @media screen and (min-width: 768px) {
-  #skills-container {
-    grid-template-columns: 1fr 1fr;
-  }
+    #skills -container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #projeto-container .projeto {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
 }
